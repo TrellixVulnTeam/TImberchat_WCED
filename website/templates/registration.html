@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Login V1</title>
@@ -28,7 +27,8 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 
-				<form class="login100-form" method="POST" action="{% url 'website_login' %}" id="registration_form">
+				<form class="login100-form" method="POST" action="{% url 'website_register' %}" id="registration_form">
+					{% csrf_token %}
 					<span class="login100-form-title">
 						New Registration
 					</span>
@@ -131,23 +131,26 @@
 	<script src="{% static 'website_login/main.js' %}"></script>
     <script>
         $(document).ready(function(e){
-            $("#registration_form").on("submit", function(e){
-                e.preventDefault();
+            <!--$("#registration_form").on("submit", function(e){-->
+                <!--&lt;!&ndash;e.preventDefault();&ndash;&gt;-->
 
-                <!--Validate thn eform Here-->
+                <!--&lt;!&ndash;Validate the form Here&ndash;&gt;-->
 
-                $.ajax({
-                    url: "{% url 'website_register' %}",
-                    type: "POST",
-                    data: $("#registration_form").serialize(),
-                    success: function(data){
-
-                    },
-                    error: function(e){
-
-                    }
-                });
-            });
+                <!--$.ajax({-->
+                    <!--url: "{% url 'website_register' %}",-->
+                    <!--type: "POST",-->
+                    <!--data: $("#registration_form").serialize(),-->
+                    <!--success: function(data){-->
+						<!--alert("Success ~ "+data);-->
+                    <!--},-->
+                    <!--error: function(e){-->
+						<!--alert("Error ~ "+e);-->
+						<!--alert(e.responseText);-->
+                    <!--}-->
+                <!--});-->
+            <!--});-->
         });
     </script>
+
+</body>
 </html>

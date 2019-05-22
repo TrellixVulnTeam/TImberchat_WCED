@@ -25,7 +25,7 @@ SECRET_KEY = 'wfx^uan=+@rchymk1tnz7x2!wv-nj$%#nt2hah77aedhvrhm65'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".timberchat.com", "192.168.1.11"]
+ALLOWED_HOSTS = [".timberchat.com", "192.168.1.7"]
 
 
 # Application definition
