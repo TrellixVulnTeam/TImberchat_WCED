@@ -6,3 +6,6 @@ class Company(models.Model):
     location = models.CharField(max_length=255, null= True)
     owner = models.CharField(max_length=255)
     character= models.CharField(max_length=255)
+    company_area = models.CharField(max_length=255, null=True)
+    status = models.BooleanField(default=True)
+

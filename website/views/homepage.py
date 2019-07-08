@@ -1,7 +1,7 @@
 from django.views.generic import View
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from django.contrib.auth.decorators import login_required
+from ..models import Post
 
 class HomePage(View):
     def get(self, request):
